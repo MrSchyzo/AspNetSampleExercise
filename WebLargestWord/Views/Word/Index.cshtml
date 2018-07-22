@@ -1,0 +1,18 @@
+﻿@model WebLargestWord.Models.WordRequest
+
+<h2>
+    Insert a phrase to retrieve the largest word
+</h2>
+
+@using (Html.BeginForm("Largest", "Word", FormMethod.Post))
+{
+    <div>
+        Phrase: 
+    </div>
+    <div>
+        @Html.TextAreaFor(request => request.Phrase)
+    </div>
+    <div>
+        <input type="submit" value="Get Largest Word" />
+    </div>
+}
