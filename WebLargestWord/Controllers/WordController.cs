@@ -22,9 +22,9 @@ namespace WebLargestWord.Controllers
         public IActionResult Largest(WordRequest request)
         {
             var phrase = request.Phrase;
-            var largestWord = retriever.Retrieve(phrase);
+            var largestWord = retriever.Retrieve(phrase ?? "");
 
-            return View(new WordResponse { LargestWord = largestWord });
+            return View(new WordResponse { Word = largestWord });
         }
     }
 }

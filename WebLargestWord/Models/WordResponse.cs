@@ -2,6 +2,6 @@
 {
     public class WordResponse
     {
-        public string LargestWord { get; set; } = "";
+        public string Word { get; set; } = "";
     }
 }
